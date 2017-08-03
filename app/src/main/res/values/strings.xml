@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Image Resize Demo</string>
+
+    <string name="text_resolution">Resolution: %1$d x %2$d</string>
+    <string name="text_scale">Scale: </string>
+    <string name="rbtn_nni">Nearest Neighbor Interpolation</string>
+    <string name="rbtn_bilinear">Bilinear Interpolation</string>
+    <string name="rbtn_bicubic">Bicubic Interpolation</string>
+    <string name="btn_run">Run</string>
+
+    <string-array name="scale_percent">
+        <item>25%</item>
+        <item>75%</item>
+        <item>120%</item>
+        <item>150%</item>
+        <item>800%</item>
+    </string-array>
+
+    <string name="dlg_processing_title">Processing</string>
+    <string name="dlg_processing_message">Please wait a moment...</string>
+
+    <string name="toast_reset">Reset Finished!</string>
+    <string name="toast_process_ok">Process Finished!</string>
+    <string name="toast_process_fail">Process Failed...</string>
+</resources>

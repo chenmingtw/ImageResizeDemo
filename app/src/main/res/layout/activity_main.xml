@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chenming.imageresizedemo.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView_show"
+        android:layout_width="0dp"
+        android:layout_height="256dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="matrix"
+        android:src="@drawable/lenna"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView_resolution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/text_resolution"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_show" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_modeList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_scale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/text_scale"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+            <Spinner
+                android:id="@+id/spinner_scale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:id="@+id/radioButton_NNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rbtn_nni" />
+
+            <RadioButton
+                android:id="@+id/radioButton_bilinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rbtn_bilinear" />
+
+            <RadioButton
+                android:id="@+id/radioButton_bicubic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rbtn_bicubic" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button_run"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_run"
+            android:layout_marginBottom="8dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
